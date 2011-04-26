@@ -98,7 +98,8 @@ public enum Log {
         SimpleDateFormat fileDateFormat =
             new SimpleDateFormat("yyyyMMdd'T'HHmmssSSS'Z'");
         logLocation.append(System.getProperty("java.io.tmpdir"))
-            .append("MyAPP_")
+            .append(Constants.APP_LOG_NAME)
+            .append("_")
             .append(fileDateFormat.format(new Date()))
             .append(".log");
         logfile = logLocation.toString();
@@ -109,7 +110,7 @@ public enum Log {
         }
         catch (IOException e) {
             System.err.println("Failure to initialize tmp log file: "
-                + logLocation.toString());
+                                   + logLocation.toString());
             e.printStackTrace();
             return;
         }

@@ -29,11 +29,17 @@
 package com.cookconsulting.util.configuration;
 
 /**
- * @author : ToddCook
- * @since : Mar 11, 2011 9:55:49 AM
+ * @author : Todd Cook
+ * @since : Mar 12, 2011
  */
 public final class Constants {
 
-    public static final String APP_NAME = "ConcurrentUIDemo";
+    public static final String APP_DISPLAY_NAME = "Java Best Practices UI";
+    public static final String APP_LOG_NAME ="JavaBestPracticesUI";
+    // menu labels
+    public static final String SIMPLE_COMPUTATION_PANEL = "Single Computation with Cancel";
+    public static final String COMPUTATIONS_PANEL = "Multiple Computations";
+    public static final String MEMOIZED_COMPUTATIONS_PANEL = "Memoized Computations";
+    public static final String SHUTDOWN_AND_EXIT = "Shutdown gracefully and exit";
 
 }

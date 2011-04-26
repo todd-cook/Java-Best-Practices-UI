@@ -29,6 +29,7 @@
 package com.cookconsulting.gui;
 
 import com.cookconsulting.util.configuration.Configurator;
+import com.cookconsulting.util.configuration.Constants;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,7 +42,7 @@ import java.awt.event.WindowEvent;
  * Demo for how to write multi-threaded GUI applications correctly
  *
  * @author : Todd Cook
- * @since : Mar 7, 2011 4:31:42 PM
+ * @since : Mar 6, 2011
  */
 public class MainApp implements ActionListener {
 
@@ -50,18 +51,12 @@ public class MainApp implements ActionListener {
     private SimpleComputationPanel simpleComputationPanel;
     private MemoizedComputationsPanel memoizedComputationsPanel;
 
-    // menu labels
-    final String SIMPLE_COMPUTATION_PANEL = "Single Computation with Cancel";
-    final String COMPUTATIONS_PANEL = "Multiple Computations";
-    final String MEMOIZED_COMPUTATIONS_PANEL = "Memoized Computations";
-    final String SHUTDOWN_AND_EXIT = "Shutdown gracefully and exit";
-
     public MainApp () {
     }
 
     private void initialize () {
         Configurator.instance.initialize();
-        frame = new JFrame("Concurrent UI Demo");
+        frame = new JFrame(Constants.APP_DISPLAY_NAME);
         frame.setLayout(new FlowLayout());
         computationsPanel = new ComputationsPanel();
         simpleComputationPanel = new SimpleComputationPanel();
@@ -76,7 +71,6 @@ public class MainApp implements ActionListener {
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setJMenuBar(createMenuBar());
-        //    frame.setContentPane (createContentPane ());
         frame.setVisible(true);
         frame.addWindowListener(new WindowAdapter() {
             public void windowClosing (WindowEvent ev) {
@@ -92,22 +86,22 @@ public class MainApp implements ActionListener {
     }
 
     public void actionPerformed (ActionEvent e) {
-        if (e.getActionCommand().equals(COMPUTATIONS_PANEL)) {
+        if (e.getActionCommand().equals(Constants.COMPUTATIONS_PANEL)) {
             simpleComputationPanel.setVisible(false);
             computationsPanel.setVisible(true);
             memoizedComputationsPanel.setVisible(false);
         }
-        if (e.getActionCommand().equals(SIMPLE_COMPUTATION_PANEL)) {
+        if (e.getActionCommand().equals(Constants.SIMPLE_COMPUTATION_PANEL)) {
             computationsPanel.setVisible(false);
             simpleComputationPanel.setVisible(true);
             memoizedComputationsPanel.setVisible(false);
         }
-        if (e.getActionCommand().equals(MEMOIZED_COMPUTATIONS_PANEL)) {
+        if (e.getActionCommand().equals(Constants.MEMOIZED_COMPUTATIONS_PANEL)) {
             computationsPanel.setVisible(false);
             simpleComputationPanel.setVisible(false);
             memoizedComputationsPanel.setVisible(true);
         }
-        if (e.getActionCommand().equals(SHUTDOWN_AND_EXIT)) {
+        if (e.getActionCommand().equals(Constants.SHUTDOWN_AND_EXIT)) {
             frame.setVisible(false);
             Configurator.instance.shutdown();
         }
@@ -121,16 +115,16 @@ public class MainApp implements ActionListener {
         menuBar = new JMenuBar();
         //Build the first menu.
         menu = new JMenu("Examples");
-        menuItem = new JMenuItem(SIMPLE_COMPUTATION_PANEL);
+        menuItem = new JMenuItem(Constants.SIMPLE_COMPUTATION_PANEL);
         menuItem.addActionListener(this);
         menu.add(menuItem);
-        menuItem = new JMenuItem(COMPUTATIONS_PANEL);
+        menuItem = new JMenuItem(Constants.COMPUTATIONS_PANEL);
         menuItem.addActionListener(this);
         menu.add(menuItem);
-        menuItem = new JMenuItem(MEMOIZED_COMPUTATIONS_PANEL);
+        menuItem = new JMenuItem(Constants.MEMOIZED_COMPUTATIONS_PANEL);
         menuItem.addActionListener(this);
         menu.add(menuItem);
-        menuItem = new JMenuItem(SHUTDOWN_AND_EXIT);
+        menuItem = new JMenuItem(Constants.SHUTDOWN_AND_EXIT);
         menuItem.addActionListener(this);
         menu.add(menuItem);
         menuBar.add(menu);
