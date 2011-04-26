@@ -1,6 +1,6 @@
-Concurrent UI
-=============
-A demonstration of best practices for Java multithreaded programming.
+Java Best Practices UI
+======================
+A demonstration of best practices for Java multithreaded programming and user interfaces.
 
 Why?
 
@@ -13,8 +13,23 @@ working application example using adaptations of source code and ideas from:
 Concurrent Programming in Java by Brian Goetz
 Effective Java, 2nd Edition by Joshua Bloch
 
-Java Concurrency in Practice features:
--------------------------------------
+Working Demo Features:
+---------------------
+* Simple Computation with Cancel
+* Multiple Computations
+* Memoized Computations
+* Shutdown gracefull and exit
+
+To Run the Demo:
+---------------
+
+mvn package
+cd target
+java -jar Java-Best-Practices-UI-1.0-dist.jar
+
+
+Implementations of Java Concurrency in Practice concepts of:
+------------------------------------------------------------
 * ThreadPools
 * Logging Singleton
 * Executor Framework
@@ -22,8 +37,8 @@ Java Concurrency in Practice features:
 * Examples of using the Executor and Completion services frameworks for responsiveness
 and cancelling a long running tasks
 
-Effective Java features:
------------------------
+Implementations of Effective Java features:
+------------------------------------------
 * Enum used as a singleton
 * Builder pattern
 * Generic collections, data structures
@@ -37,5 +52,4 @@ Other Best Practices:
 TODO 
 Using documents located in a package path of testing; e.g. XML validation
 Launching Wizard - because you can't change the memory & thread sizing at runtime
-About screen with profile & application versioning information
-
+About screen with profile & application versioning information.
