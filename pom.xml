@@ -167,4 +167,16 @@ the new site plugin if the POM file is being executed by Maven 3 -->
             </build>
         </profile>
     </profiles>
+       <developers>
+        <developer>
+            <id>Todd</id>
+            <name>Cook</name>
+            <email>todd.g.cook AT gmail.com</email>
+            <url>http://cookconsulting.com</url>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
 </project>
