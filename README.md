@@ -9,9 +9,7 @@ interface programming is even worse. The book, The "Java Concurrency in Practice
 chapter on multithreaded UI programming, however the examples and source files don't provide a
 complete, working example, so I distilled the ideas from the book into a complete, yet simple
 working application example using adaptations of source code and ideas from:
-
-Concurrent Programming in Java by Brian Goetz
-Effective Java, 2nd Edition by Joshua Bloch
+"Concurrent Programming in Java" by Brian Goetz, and "Effective Java" 2nd Edition by Joshua Bloch.
 
 Working Demo Features:
 ---------------------
@@ -22,10 +20,9 @@ Working Demo Features:
 
 To Run the Demo:
 ---------------
-
-mvn package
-cd target
-java -jar Java-Best-Practices-UI-1.0-dist.jar
+* mvn package
+* cd target
+* java -jar Java-Best-Practices-UI-1.0-dist.jar
 
 
 Implementations of Java Concurrency in Practice concepts of:
