@@ -29,8 +29,8 @@
 package com.cookconsulting.tasks;
 
 /**
- * @author : ToddCook
- * @since : Mar 10, 2011 12:33:20 PM
+ * @author : Todd Cook
+ * @since : Mar 12, 2011
  */
 public interface IFibonacci<T extends Number> {
     T fibonacci (T n);

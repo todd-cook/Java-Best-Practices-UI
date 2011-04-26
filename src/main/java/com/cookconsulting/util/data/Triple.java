@@ -42,7 +42,7 @@ import java.util.Comparator;
  * probably just seem silly.
  *
  * @author : Todd Cook
- * @since : Mar 9, 2011 11:15:21 AM
+ * @since : Mar 6, 2011
  */
 public class Triple<T, V, U> {
 

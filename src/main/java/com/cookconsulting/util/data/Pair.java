@@ -40,7 +40,7 @@ import java.util.Comparator;
  * PairTree with a supplied Comparator
  * * @author : Todd Cook
  *
- * @since : Mar 8, 2011 4:56:26 PM
+ * @since : Mar 6, 2011
  */
 public class Pair<T, V> {
 

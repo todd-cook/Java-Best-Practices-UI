@@ -32,8 +32,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author : ToddCook
- * @since : Mar 10, 2011 12:03:23 PM
+ * @author : Todd Cook
+ * @since : Mar 12, 2011
  */
 public class CircularList<T> extends ArrayList<T> {
 

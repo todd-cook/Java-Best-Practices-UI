@@ -28,7 +28,6 @@
 
 package com.cookconsulting.util.configuration;
 
-import com.cookconsulting.util.configuration.Log;
 import net.jcip.examples.MyThreadFactory;
 
 import java.util.List;
@@ -40,7 +39,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * @author : Todd Cook
- * @since : Mar 8, 2011 11:07:24 AM
+ * @since : Mar 6, 2011
  */
 public enum Configurator {
 

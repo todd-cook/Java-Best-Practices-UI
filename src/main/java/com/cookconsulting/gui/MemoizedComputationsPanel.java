@@ -109,17 +109,9 @@ public final class MemoizedComputationsPanel extends JPanel {
 
         jbtStart.addActionListener(new ActionListener() {
             public void actionPerformed (ActionEvent e) {
-
-//                FibonacciTask ft = new FibonacciTask (
-//                        Integer.parseInt (jtxfRandomValue.getText ()));
-//                FibonacciMemoize.instance.submit (
-//                        Integer.parseInt (jtxfRandomValue.getText ()));
-
                 completionService.submit(new FibonacciTaskBI(
                     FibonacciMemoize.instance.getCacheMap(),
                     Integer.parseInt(jtxfRandomValue.getText())));
-
-                //    completionService.submit (fbi);
                 jbtRandom.doClick();
                 sequentialExec.execute(new Runnable() {
                     public void run () {

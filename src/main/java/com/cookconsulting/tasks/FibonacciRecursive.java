@@ -30,7 +30,7 @@ package com.cookconsulting.tasks;
 
 /**
  * @author : Todd Cook
- * @since : Mar 8, 2011 4:26:04 PM
+ * @since : Mar 12, 2011
  */
 public class FibonacciRecursive implements IFibonacci<Long> {
 

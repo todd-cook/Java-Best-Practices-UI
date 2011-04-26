@@ -39,8 +39,8 @@ import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
- * @author : ToddCook
- * @since : Mar 8, 2011 10:36:49 AM
+ * @author : Todd Cook
+ * @since : Mar 12, 2011
  */
 public final class FibonacciTask implements Runnable,
     Callable, Future, Serializable {

@@ -45,12 +45,11 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * it has exponential complexity, with a minor speed up in that it uses a cache of previously
  * computed numbers.
  * The point is to illustrate that the cache can be memoized.
- *
+ * <p/>
  * We use big integer because the long datatype overflows at:  fibonacci (93)
  *
- *
- * @author : ToddCook
- * @since : Mar 11, 2011 11:21:29 AM
+ * @author : Todd Cook
+ * @since : Mar 12, 2011
  */
 public class FibonacciTaskBI implements Runnable, Callable<Triple<Integer, BigInteger, Long>>,
     Future<Triple<Integer, BigInteger, Long>>, IFibonacci<BigInteger>, Serializable {

@@ -28,32 +28,28 @@
 
 package com.cookconsulting.tasks;
 
-import static org.junit.Assert.assertTrue;
+import com.cookconsulting.util.data.Triple;
 import org.junit.Test;
 
 import java.math.BigInteger;
 import java.util.concurrent.ConcurrentHashMap;
 
-import com.cookconsulting.util.data.Triple;
-
-
 /**
  * @author : Todd Cook
- * @since : Mar 10, 2011 12:45:34 PM
+ * @since : Mar 12, 2011
  */
 public class FibonacciRecursiveBITest {
 
-
     @Test
-    public void test(){
-    ConcurrentHashMap<Integer, BigInteger> cache =
-            new ConcurrentHashMap<Integer, BigInteger> ();
-     FibonacciTaskBI fbi  = new FibonacciTaskBI (cache, 10) ;
-          Triple<Integer, BigInteger, Long> result = fbi.get ();
+    public void test () {
+        ConcurrentHashMap<Integer, BigInteger> cache =
+            new ConcurrentHashMap<Integer, BigInteger>();
+        FibonacciTaskBI fbi = new FibonacciTaskBI(cache, 10);
+        Triple<Integer, BigInteger, Long> result = fbi.get();
 
         FibonacciRecursive fr = new FibonacciRecursive();
-       long result2 = fr.fibonacci (10L);
-       // assertTrue (result.get_2 ().longValue () == result2);
+        long result2 = fr.fibonacci(10L);
+        // assertTrue (result.get_2 ().longValue () == result2);
     }
 
 }

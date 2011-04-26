@@ -28,8 +28,8 @@
 
 package com.cookconsulting.tasks;
 
-import com.cookconsulting.util.data.Pair;
 import com.cookconsulting.util.configuration.Log;
+import com.cookconsulting.util.data.Pair;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -43,9 +43,8 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- *
  * @author : Todd Cook
- * @since : Mar 8, 2011 4:26:04 PM
+ * @since : Mar 12, 2011
  */
 public enum FibonacciMemoize {
 
