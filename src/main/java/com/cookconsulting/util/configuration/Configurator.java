@@ -124,7 +124,7 @@ public enum Configurator {
     public String getMemoizedFilename (String name) {
         StringBuilder serializationFile = new StringBuilder();
         serializationFile.append(System.getProperty("java.io.tmpdir"))
-            .append(Constants.APP_NAME)
+            .append(Constants.APP_LOG_NAME)
             .append("_")
             .append(name)
             .append(".dat");
